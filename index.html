@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>online store</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/carts.css">
 		<style type="text/css">
 			h1{text-align: center;}
 			h1{padding: 30px;  font-size: 30px; color: #000000;}
@@ -17,7 +19,7 @@
 			.show .dd2{font-size: 30px; color: #383838; font-weight: bold; text-align: center;  width: 160px; margin-left: auto; margin-right: auto;}
 			.show .dd3 input{width: 150px; margin-left: 36px; border: #000000 1px solid; line-height: 26px; padding-left: 10px;}
 			.show .dd4 input{width: 160px; background: #383838; margin-left: 36px; padding: 10px 0; text-align: center; color: #fff; font-weight: bold; font-size: 20px; border-radius: 10px;}
-			.show dl .dd4 input:hover{cursor: pointer; background: #999999; color: #ffffff;}
+			.show .dd4 input:hover{cursor: pointer; background: #999999; color: #ffffff;}
 			.footer{width: 1000px; margin: 10px auto;padding: 10px; text-align: center; }
 			.footer .dd1 input{width: 130px; background: #383838;  padding: 10px ; text-align: center; color: #fff; font-weight: bold; font-size: 20px;}
 			.footer .dd1 input:hover{cursor: pointer; background: #999999; color: #ffffff;}
@@ -60,12 +62,153 @@
 			<div style="clear: left;"></div>
 		</div>
 
-		<div class="footer">
-			<dl>
-				<dd><h2>Shopping Cart</h2></dd>
-				<dd class="dd1"><input type="button" name="" id="" onclick="alert('Thank you for your purchase!')"value="check out" /></dd>
-			</dl>
-		</div>
+		<section class="cartMain" style="margin-top:90px;">
+			<div class="cartMain_hd">
+				<ul class="order_lists cartTop" style="background:#e5e5e5;">
+					<li class="list_chk">
+						<input type="checkbox" id="all" class="whole_check">
+						<label for="all"></label>
+						All
+					</li>
+					<li class="list_con">Products</li>
+					<li class="list_price">Price</li>
+					<li class="list_amount">Quantity</li>
+					<li class="list_sum">Total</li>
+					<li class="list_op">Edit</li>
+				</ul>
+			</div>
+
+
+			<div class="cartBox">
+				<div class="order_content">
+					<ul class="order_lists">
+						<li class="list_chk">
+							<input type="checkbox" id="checkbox_4" class="son_check">
+							<label for="checkbox_4"></label>
+						</li>
+						<li class="list_con">
+							<div class="list_img"><a href="javascript:"><img src="img/4.jpg" alt=""></a></div>
+							<div class="list_text"><a href="javascript:">Homemade fruit ice cream</a></div>
+						</li>
+
+						<li class="list_price">
+							<p class="price">￥5</p>
+						</li>
+						<li class="list_amount">
+							<div class="amount_box">
+								<a href="javascript:" class="reduce reSty">-</a>
+								<input type="text" value="1" class="sum">
+								<a href="javascript:" class="plus">+</a>
+							</div>
+						</li>
+						<li class="list_sum">
+							<p class="sum_price">￥5</p>
+						</li>
+						<li class="list_op">
+							<p class="del"><a href="javascript:" class="delBtn">Remove</a></p>
+						</li>
+					</ul>
+					<ul class="order_lists">
+						<li class="list_chk">
+							<input type="checkbox" id="checkbox_5" class="son_check">
+							<label for="checkbox_5"></label>
+						</li>
+						<li class="list_con">
+							<div class="list_img"><a href="javascript:"><img src="img/3.jpg" alt=""></a></div>
+							<div class="list_text"><a href="javascript:">Ice cream with Cone</a></div>
+						</li>
+
+						<li class="list_price">
+							<p class="price">￥2</p>
+						</li>
+						<li class="list_amount">
+							<div class="amount_box">
+								<a href="javascript:" class="reduce reSty">-</a>
+								<input type="text" value="1" class="sum">
+								<a href="javascript:" class="plus">+</a>
+							</div>
+						</li>
+						<li class="list_sum">
+							<p class="sum_price">￥2</p>
+						</li>
+						<li class="list_op">
+							<p class="del"><a href="javascript:" class="delBtn">Remove</a></p>
+						</li>
+					</ul>
+					<ul class="order_lists">
+						<li class="list_chk">
+							<input type="checkbox" id="checkbox_8" class="son_check">
+							<label for="checkbox_8"></label>
+						</li>
+						<li class="list_con">
+							<div class="list_img"><a href="javascript:"><img src="img/1.jpg" alt=""></a></div>
+							<div class="list_text"><a href="javascript:">Frozen Yogurt</a></div>
+						</li>
+						<li class="list_price">
+							<p class="price">￥4</p>
+						</li>
+						<li class="list_amount">
+							<div class="amount_box">
+								<a href="javascript:" class="reduce reSty">-</a>
+								<input type="text" value="1" class="sum">
+								<a href="javascript:" class="plus">+</a>
+							</div>
+						</li>
+						<li class="list_sum">
+							<p class="sum_price">￥4</p>
+						</li>
+						<li class="list_op">
+							<p class="del"><a href="javascript:" class="delBtn">Remove</a></p>
+						</li>
+					</ul>
+					<ul class="order_lists">
+						<li class="list_chk">
+							<input type="checkbox" id="checkbox_9" class="son_check">
+							<label for="checkbox_9"></label>
+						</li>
+						<li class="list_con">
+							<div class="list_img"><a href="javascript:"><img src="img/2.jpg" alt=""></a></div>
+							<div class="list_text"><a href="javascript:">Mochi ice cream</a></div>
+						</li>
+
+						<li class="list_price">
+							<p class="price">￥3</p>
+						</li>
+						<li class="list_amount">
+							<div class="amount_box">
+								<a href="javascript:" class="reduce reSty">-</a>
+								<input type="text" value="1" class="sum">
+								<a href="javascript:" class="plus">+</a>
+							</div>
+						</li>
+						<li class="list_sum">
+							<p class="sum_price">￥3</p>
+						</li>
+						<li class="list_op">
+							<p class="del"><a href="javascript:" class="delBtn">Remove</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="bar-wrapper">
+				<div class="bar-right">
+					<div class="piece">Items Selected<strong class="piece_num">0</strong></div>
+					<div class="totalMoney">Sub Total: <strong class="total_text">0.00</strong></div>
+					<div class="calBtn"><a href="javascript:">Submit</a></div>
+				</div>
+			</div>
+		</section>
+		<section class="model_bg"></section>
+		<section class="my_model">
+			<p class="title">Remove Product <span class="closeModel">X</span></p>
+			<p>Are you sure you want to remove it？</p>
+			<div class="opBtn"><a href="javascript:" class="dialog-sure">Yes</a><a href="javascript:" class="dialog-close">Cancel</a></div>
+		</section>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/carts.js"></script>
+
 
 	</body>
 </html>
